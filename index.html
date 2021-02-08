@@ -5,24 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hi Todo </title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8"/>
+    
 </head>
 <body>
-    <div class="container max-auto">
-    <div class="js-clock">
-        <h1 class="font-mono text-7xl text-purple-700 text-center">00:00</h1>
-    </div>
+    <div class="container">
+    <section class="hero is-small is-primary">
+        <div class="hero-body">
+                <div class="js-clock">
+                        <h1 class="title is-1">00:00</h1>
+                    </div>
+            <p class="subtitle">
+            현재시간
+            </p>
+        </div>
+    </section>
+    <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <p class="help is-success">This username is available</p>
+          </div>
     <form action="" class="js-form form">
+        
+
         <input type="text" name="" id="" placeholder="What is your name?">
     </form>
     <h4 class="js-greetings greetings"></h4>
     <form action="" class="js-toDoForm">
-        <input type="text" name="" id="" placeholder="Write a to do">
+        <input class="input is-primary" type="text" name="" id="" placeholder="할일을 적어주세요!">
     </form>
+
+    <div class="bg-gradient-to-br from-pink-500 to-rose-500"></div>
+
     <ul class="js-toDoList"></ul>
+    
     </div>
     <span class="js-weather"></span>
     <script src = "todo.js"></script>
