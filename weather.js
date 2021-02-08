@@ -14,24 +14,24 @@ function getWeather(lat, lng) {
     });
 }
 
-// getCorona();
-// function getCorona(){
-//     var xhr = new XMLHttpRequest();
-//     var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson'; /*URL*/
-//     var queryParams = '?' + encodeURIComponent('ServiceKey') + '='+'cICdnrurLBWeNtt7z%2FD3VSwFr6RhfHKbXn6QbsZfTTpj1%2B6fyhraTXG5bOYSbepkBmGAzjA8tlflHj8LyuWFMA%3D%3D'; 
-//     queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
-//     queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
-//     queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20210202'); /**/
-//     queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20210202'); /**/
-//     xhr.open('GET', url + queryParams);
-//     xhr.onreadystatechange = function () {
-//         if (this.readyState == 4) {
-//             alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
-//         }
-//     };
+getCorona();
+function getCorona(){
+    var xhr = new XMLHttpRequest();
+    var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson'; /*URL*/
+    var queryParams = '?' + encodeURIComponent('ServiceKey') + '='+'cICdnrurLBWeNtt7z%2FD3VSwFr6RhfHKbXn6QbsZfTTpj1%2B6fyhraTXG5bOYSbepkBmGAzjA8tlflHj8LyuWFMA%3D%3D'; 
+    queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+    queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+    queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20210202'); /**/
+    queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20210202'); /**/
+    xhr.open('GET', url + queryParams);
+    xhr.onreadystatechange = function () {
+        if (this.readyState == 4) {
+            alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+        }
+    };
 
-//     xhr.send('');
-// }
+    xhr.send('');
+}
 
 function saveCoords(coordsObj){
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
